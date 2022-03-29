@@ -31,6 +31,7 @@ namespace Kata.Tests._01_FizzBuzz
         [Theory]
         [InlineData(-1)]
         [InlineData(0)]
+        [InlineData(101)]
         public void TestGetFizzBuz_ShouldThrowExceptionWhenArgumentOutOfRange(int number)
         {
             var sut = new FizzBuzz();
