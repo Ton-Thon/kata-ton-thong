@@ -10,16 +10,16 @@ namespace Kata.Tests._01_FizzBuzz
     public class FizzBuzzTests
     {
         [Fact]
-        public void SayHelloTest_ShouldReturnTest()
+        public void GetFizzBuzz_ShouldReturnNumberAsStringCorrect()
         {
             // Arrange
             var sut = new FizzBuzz();
 
             // Act
-            var actual = sut.GetFizzBuzz();
+            var actual = sut.GetFizzBuzz(1);
 
             // Assert
-            actual.Should().Be("Hello Test!");
+            actual.Should().Be("1");
         }
     }
 }
