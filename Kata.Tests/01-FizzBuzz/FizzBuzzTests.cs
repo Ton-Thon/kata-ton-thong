@@ -14,6 +14,7 @@ namespace Kata.Tests._01_FizzBuzz
         [InlineData(15, "FizzBuzz")]
         [InlineData(30, "FizzBuzz")]
         [InlineData(50, "Buzz")]
+        [InlineData(75, "FizzBuzz")]
         public void TestGetFizzBuz(int number, string expected)
         {
             // Arrange
