@@ -1,4 +1,5 @@
 ﻿using Kata._01_FizzBuzz;
+using System;
 
 namespace Kata.Tests._01_FizzBuzz
 {
@@ -25,6 +26,15 @@ namespace Kata.Tests._01_FizzBuzz
 
             // Assert
             actual.Should().Be(expected);
+        }
+
+        [Theory]
+        [InlineData(-1)]
+        public void TestGetFizzBuz_ShouldThrowExceptionWhenArgumentOutOfRange(int number)
+        {
+            var sut = new FizzBuzz();
+            Action act = () => sut.GetFizzBuzz(number);
+            act.Should().Throw<ArgumentOutOfRangeException>("number");
         }
     }
 }
