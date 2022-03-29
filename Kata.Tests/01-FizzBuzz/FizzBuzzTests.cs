@@ -1,16 +1,13 @@
 ﻿using Kata._01_FizzBuzz;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kata.Tests._01_FizzBuzz
 {
     public class FizzBuzzTests
     {
-        [Fact]
-        public void GetFizzBuzz_ShouldReturnNumberAsStringCorrect()
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        public void GetFizzBuzz_ShouldReturnNumberAsStringCorrect(int number, string result)
         {
             // Arrange
             var sut = new FizzBuzz();
@@ -19,7 +16,7 @@ namespace Kata.Tests._01_FizzBuzz
             var actual = sut.GetFizzBuzz(1);
 
             // Assert
-            actual.Should().Be("1");
+            actual.Should().Be(result);
         }
     }
 }
