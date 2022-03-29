@@ -10,13 +10,7 @@ namespace Kata._01_FizzBuzz
     {
         public string PrintFizzBuzzOneToHundred()
         {
-            var fizzBuzzOneToHundred = new StringBuilder();
-            for (int i = 1; i <= 100; i++)
-            {
-                fizzBuzzOneToHundred.Append(GetFizzBuzz(i) + " ");
-            }
-
-            return fizzBuzzOneToHundred.ToString().Remove(fizzBuzzOneToHundred.Length - 1);
+            return string.Join(" ", Enumerable.Range(1, 100).Select(e => GetFizzBuzz(e)));
         }
 
         public string GetFizzBuzz(int number)
