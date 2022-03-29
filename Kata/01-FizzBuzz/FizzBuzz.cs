@@ -10,7 +10,7 @@ namespace Kata._01_FizzBuzz
     {
         public string GetFizzBuzz(int number)
         {
-            return "Hello Test!";
+            return "1";
         }
     }
 }
