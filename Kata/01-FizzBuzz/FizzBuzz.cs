@@ -11,22 +11,32 @@ namespace Kata._01_FizzBuzz
         public string GetFizzBuzz(int number)
         {
 
-            if (number % 3 == 0 && number % 5 == 0)
+            if (IsFizz(number) && IsBuzz(number))
             {
                 return "FizzBuzz";
             }
 
-            if (number % 3 == 0)
+            if (IsFizz(number))
             {
                 return "Fizz";
             }
 
-            if(number % 5 == 0)
+            if(IsBuzz(number))
             {
                 return "Buzz";
             }
 
             return number.ToString();
+        }
+
+        private bool IsFizz(int number)
+        {
+            return number % 3 == 0;
+        }
+
+        private bool IsBuzz(int number)
+        {
+            return number % 5 == 0;
         }
     }
 }
