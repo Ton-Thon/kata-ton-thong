@@ -10,10 +10,7 @@ namespace Kata._01_FizzBuzz
     {
         public string GetFizzBuzz(int number)
         {
-            if(number == -1 || number == 0 || number == 101)
-            {
-                throw new ArgumentOutOfRangeException(nameof(number));
-            }
+            IsNumberInRange(number);
 
             if (IsFizz(number) && IsBuzz(number))
             {
@@ -31,6 +28,14 @@ namespace Kata._01_FizzBuzz
             }
 
             return number.ToString();
+        }
+
+        private void IsNumberInRange(int number)
+        {
+            if(number < 1 || number > 100)
+            {
+                throw new ArgumentOutOfRangeException(nameof(number));
+            }
         }
 
         private bool IsFizz(int number)
