@@ -4,8 +4,4 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="01-FizzBuzz\" />
-  </ItemGroup>
-
 </Project>
