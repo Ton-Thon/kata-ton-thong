@@ -15,6 +15,11 @@ namespace Kata._01_FizzBuzz
                 return "Fizz";
             }
 
+            if(number == 5)
+            {
+                return "Buzz";
+            }
+
             return number.ToString();
         }
     }
