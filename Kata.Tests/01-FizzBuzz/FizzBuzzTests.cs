@@ -7,7 +7,8 @@ namespace Kata.Tests._01_FizzBuzz
         [Theory]
         [InlineData(1, "1")]
         [InlineData(2, "2")]
-        public void GetFizzBuzz_ShouldReturnNumberAsStringCorrect(int number, string result)
+        [InlineData(3, "Fizz")]
+        public void TestGetFizzBuz(int number, string expected)
         {
             // Arrange
             var sut = new FizzBuzz();
@@ -16,7 +17,7 @@ namespace Kata.Tests._01_FizzBuzz
             var actual = sut.GetFizzBuzz(number);
 
             // Assert
-            actual.Should().Be(result);
+            actual.Should().Be(expected);
         }
     }
 }
