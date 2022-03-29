@@ -10,6 +10,10 @@ namespace Kata._01_FizzBuzz
     {
         public string GetFizzBuzz(int number)
         {
+            if(number == -1)
+            {
+                throw new ArgumentOutOfRangeException(nameof(number));
+            }
 
             if (IsFizz(number) && IsBuzz(number))
             {
