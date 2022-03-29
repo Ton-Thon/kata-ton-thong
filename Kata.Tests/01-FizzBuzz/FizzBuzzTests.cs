@@ -13,7 +13,7 @@ namespace Kata.Tests._01_FizzBuzz
             var sut = new FizzBuzz();
 
             // Act
-            var actual = sut.GetFizzBuzz(1);
+            var actual = sut.GetFizzBuzz(number);
 
             // Assert
             actual.Should().Be(result);
